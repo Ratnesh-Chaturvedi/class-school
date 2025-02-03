@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .container{
+            width:100vw;
+            height: 100vh;
+            background-color: rgba(171, 116, 13, 0.735);
+            display: flex;
+            gap:10px;
+            flex-direction: column;
+            
+             justify-content: center;
+             align-items: center;
+            
+        }
+        .heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+           .main{
+            border:2px solid black;
+            width: 900px;
+            height: 80vh;
+            border-radius: 10px ;
+            display: flex;
+            flex-direction: column;
+           }
+        .form{
+          
+            width: 900px;
+            height: 30vh;
+            border-radius: 10px ;
+            display: flex;
+        }
+       .foot{
+        
+        width: 900px;
+        height: 48vh;
+       }
+        .left{
+            margin-top: 15px;;
+             height: 30vh;
+             width:60%;
+            
+        }
+        .right{
+            margin-top: 0px;;
+             height: 30vh;
+             width:40%;
+             /* border :2px solid black; */
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+        }
+
+        .image{
+            height: 150px;
+            width:150px;
+            border: 2px solid black;
+        }
+        #image1{
+            display:none;
+        }
+
+        .info{
+            display: flex;
+            margin: 10px;
+            margin-top:20px;
+            margin-left:50px;
+           align-items: center;
+            gap:20px;
+        }
+        .info p{
+            font-size: large;
+        }
+        .info input{
+             width:300px;
+             padding: 10px;
+             outline: none;
+             border-radius: 10px;
+        }
+
+        .gender{
+            padding: 30px;
+            font-size: large;
+            display: flex;
+            justify-content: space-around;
+        }
+        .date{
+           
+            font-size: large;
+            display: flex;
+           
+            position: relative;
+        }
+        .date input{
+            width:300px;
+             padding: 10px;
+             outline: none;
+             border-radius: 10px;
+             position: absolute;
+             left:430px
+        }
+        .date p{
+           position: absolute;
+           left:150px
+        }
+        .email{
+            margin-top: 30px;
+            padding: 30px;
+            font-size: large;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .email input{
+            width:300px;
+             padding: 10px;
+             outline: none;
+             border-radius: 10px;
+        }
+        .phone{
+            
+            padding: 10px;
+            font-size: large;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .phone input{
+            width:300px;
+             padding: 10px;
+             outline: none;
+             border-radius: 10px;
+        }
+
+        .level{
+            font-size: large;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .level select{
+            background-color: rgb(215, 207, 207);
+            padding: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .department{
+            margin-top: 30px;
+            font-size: large;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .department select{
+            background-color: rgb(215, 207, 207);
+            padding: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+      
+        .cat{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px
+        }
+        .check{
+            height: 24px;
+            width:14px;
+        }
+
+    </style>
+</head>
+<body>
+    
+     <div class="container">
+         <div class="heading">
+           <h1>Raj Kumar Goel Institute Of Technology and Managment</h1>
+             <h2>Registation Form </h2>
+         </div>
+         <div class="main">
+            <div class="form">
+                <div class="left">
+                    <div class="info">
+                        <p>Student Name :</p>
+                        <input type="text" placeholder=" Full Name">
+                    </div>
+                    <div class="info">
+                        <p> Father's Name :</p>
+                        <input type="text" placeholder="Father's  Full Name">
+                    </div>
+                    <div class="info">
+                        <p> Mother's Name :</p>
+                        <input type="text" placeholder=" Mother's Full Name">
+                    </div>
+                </div>
+                <div class="right">
+                    <label for="image1">
+                        <!-- <input id="image1" type="file"> -->
+                        <img class="image" src="img.jpg" alt="">
+                    </label>
+                </div>
+                   
+            </div>
+            <div class="foot">
+                <div class="gender">
+                    <p>Gender:</p>
+                    <div class="cat">
+                        <p>Male</p>
+                        <input class="check" type="checkbox">
+                        <p>Female</p>
+                        <input  class="check" type="checkbox">
+                        <p>Other</p>
+                        <input   class="check" type="checkbox">
+                    </div>
+                </div>
+                <div class="date">
+                    <p>Date of Birth :</p>
+                    <input type="date">
+                </div>
+                <div class="email">
+                    <p> E-mail :</p>
+                    <input type="text" placeholder="example@gmail.com">
+                </div>
+                <div class="level">
+                    <p> Level :</p>
+                    <select id="mySelect">
+                        <option value="option1">High School</option>
+                        <option value="option2">Intermidate</option>
+                        <option value="option3">Diploma</option>
+                      </select>
+                </div>
+                <div class="department">
+                    <p> Department :</p>
+                    <select id="mySelect">
+                        <option value="option1">Electrical Engineering</option>
+                        <option value="option2">Computer Science & Engineering</option>
+                        <option value="option3">Infomation Tecnology</option>
+                      </select>
+                </div>
+
+                <div class="phone">
+                    <p> Mobile/Tel:</p>
+                    <input type="text" placeholder="Enter Phone no">
+                </div>
+                </div>
+            </div>
+         </div>  
+     </div>   
+ 
+
+
+</body>
+</html>
