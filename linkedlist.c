@@ -43,7 +43,6 @@ struct node*ptr,*next;
  printf("enter node1:");
  scanf("%d",&ptr->info);
  ptr->link=NULL;
-
 start=ptr;
  printf("<Y/N>");
  getchar();
@@ -169,12 +168,15 @@ void delete_Pos(){
 
 //reverse a list
 
-void reverse(){
-    struct node*ptr,*last=NULL,*next;
-    ptr=start;
-  while(ptr!=NULL){
-    next=ptr->link;
-    last=ptr;
-    ptr=next;
-  }
+void reverse() {
+    struct node *ptr, *prev = NULL, *next = NULL;
+    ptr = start;
+    while (ptr != NULL) {
+        next = ptr->link;   // Store the next node
+        ptr->link = prev;   // Reverse the link
+        prev = ptr;         // Move prev to this node
+        ptr = next;         // Move to the next node
+    }
+    start = prev;           // Update the start pointer to the new head
 }
+ 
