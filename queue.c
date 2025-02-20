@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 // QUEUE using array
-/* 
+
 #define MAX 100
 int q[MAX+1],front=-1,rear=-1;
 
@@ -69,7 +69,7 @@ void pop(){
     printf("element deleted:\n");
 }
 
-*/
+
 
 
 
@@ -116,7 +116,7 @@ void main(){
 }
 
 void push(){
-    struct node*ptr;
+    struct node*ptr; 
     ptr=(struct node *)malloc(sizeof(struct node));
     int item;
     printf("enter elem:\n");
