@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE invitation [
+    <!ELEMENT invitation (to, from, occasion, message)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT occasion (#PCDATA)>
+    <!ELEMENT message (#PCDATA)>
+]>
+<invitation>
+    <to>Ravi</to>
+    <from>Priya</from>
+    <occasion>Diwali</occasion>
+    <message>You are warmly invited to celebrate Diwali with us on 4th November.</message>
+</invitation>

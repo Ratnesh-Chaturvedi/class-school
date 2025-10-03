@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Portfolio</title>
+    <style>
+      /* poppins */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      /* Anton */
+      @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+        ::selection {
+          color: orangered;
+        }
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      #page1 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+      #nav {
+        padding: 10px;
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns: 50% 10% 10% 10% 10%;
+        height: 80px;
+        align-items: center;
+        justify-items: center;
+      }
+      #logo {
+        justify-self: start;
+        font-size: 2.5rem;
+      }
+      .nav-heading {
+        font-size: 1rem;
+        border: 1px solid grey;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+      #text {
+        margin-top: 50px;
+        position: relative;
+      }
+      #text h1,
+      h4 {
+        font-size: 14rem;
+        line-height: 1;
+        text-align: center;
+      }
+      #text-1 {
+        font-family: "Anton";
+        letter-spacing: 20px;
+        color: rgb(23, 22, 22);
+      }
+      #text-2 {
+        font-weight: 700;
+        -webkit-text-stroke: 1px rgb(25, 25, 24);
+        color: lightskyblue;
+        letter-spacing: -8px;
+        /* z-index: 99; */
+      }
+      #text-2-up {
+        position: absolute;
+
+        font-size: 14rem;
+        letter-spacing: -8px;
+        top: 33%;
+        left: 4.28%;
+        z-index: 99;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+
+      #text-3 {
+        font-size: 20px;
+        color: rgb(25, 25, 24);
+        text-transform: capitalize;
+        text-align: center;
+        font-family: "Anton";
+        font-weight: 500;
+        line-height: 1;
+      }
+      #connection {
+        margin-left: 10%;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      .icons {
+        display: flex;
+        gap: 10px;
+      }
+      .icons h4 {
+        padding: 2px;
+        font-size: 30px;
+        color: rgb(25, 25, 24);
+      }
+      #img img {
+        position: absolute;
+        height: 110vh;
+        rotate: 0deg;
+        bottom: 10%;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page1">
+      <div id="nav">
+        <h2 id="logo">Portfolio</h2>
+        <h3 class="nav-heading">Home</h3>
+        <h3 class="nav-heading">Project</h3>
+        <h3 class="nav-heading">Contact</h3>
+        <h3 class="nav-heading">About</h3>
+      </div>
+      <div id="text">
+        <h1 id="text-1">RATNESH</h1>
+        <h2 id="text-2-up">CHATURVEDI</h2>
+        <h1 id="text-2">CHATURVEDI</h1>
+        <h4 id="text-3">
+          I’m a Third-year B.Tech student.
+          <br />
+          passionate about <span>coding</span>, <span>designing</span> ,<span
+            >video making</span
+          >,<br />
+          and exploring new technologies.
+        </h4>
+      </div>
+      <div id="connection">
+        <h3>Connect With Me :-</h3>
+        <div class="icons">
+          <h4><i class="fa-brands fa-linkedin"></i></h4>
+          <h4><i class="fa-brands fa-twitter"></i></h4>
+          <h4><i class="fa-brands fa-github"></i></h4>
+          <h4><i class="fa-brands fa-instagram"></i></h4>
+        </div>
+      </div>
+      <div id="img">
+        <img src="Luffy Old Style.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
