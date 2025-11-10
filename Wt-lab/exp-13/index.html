@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener Example</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+      }
+      #box {
+        width: 150px;
+        height: 150px;
+        background-color: lightblue;
+        margin: 20px auto;
+        line-height: 150px;
+        cursor: pointer;
+      }
+      input,
+      select {
+        padding: 5px;
+        margin: 10px;
+      }
+      div {
+        border: 2px solid black;
+        width: fit-content;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2 id="simpleText">JavaScript Event Listener Demo</h2>
+
+      <!-- Click, Mouseover, Mouseout -->
+      <div id="box">Hover / Click</div>
+
+      <!-- Key Events -->
+      <input type="text" id="textInput" placeholder="Type something..." />
+
+      <!-- Change Event -->
+      <select id="colorSelect">
+        <option value="">Choose a color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+
+      <!-- Submit Event -->
+      <form id="myForm">
+        <input type="text" id="name" placeholder="Enter name" required />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="output"></p>
+    </div>
+    <script>
+      const box = document.getElementById("box");
+      const textInput = document.getElementById("textInput");
+      const colorSelect = document.getElementById("colorSelect");
+      const myForm = document.getElementById("myForm");
+      const output = document.getElementById("output");
+      const h2Text = document.getElementById("simpleText");
+
+      // Click event
+      box.addEventListener("click", () => {
+        output.textContent = "Box clicked!";
+      });
+      h2Text.addEventListener("click", () => {
+        alert("clicked on the H2 tag:");
+      });
+      
+      // Mouseover and mouseout events
+      box.addEventListener("mouseover", () => {
+        box.style.backgroundColor = "orange";
+        box.textContent = "Mouse Over!";
+      });
+
+      box.addEventListener("mouseout", () => {
+        box.style.backgroundColor = "lightblue";
+        box.textContent = "Hover / Click";
+      });
+
+      // Keyup event
+      textInput.addEventListener("keyup", () => {
+        output.textContent = "You typed: " + textInput.value;
+      });
+
+      // Change event (select)
+      colorSelect.addEventListener("change", () => {
+        const color = colorSelect.value;
+        if (color) {
+          output.textContent = "You selected color: " + color;
+          output.style.color = color;
+        } else {
+          output.textContent = "";
+        }
+      });
+
+      // Submit event
+      myForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        if (name) {
+          output.textContent = "Form submitted! Hello, " + name + "!";
+        } else {
+          output.textContent = "Please enter your name.";
+        }
+        myForm.reset();
+      });
+    </script>
+  </body>
+</html>

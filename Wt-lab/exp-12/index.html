@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Button Using JavaScript</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    div {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h3>Select Your Favorite Color:</h3>
+    <label><input type="radio" name="color" value="Red"> Red</label><br>
+    <label><input type="radio" name="color" value="Green"> Green</label><br>
+    <label><input type="radio" name="color" value="Blue"> Blue</label><br><br>
+    <button onclick="showSelected()">Submit</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function showSelected() {
+      const colors = document.getElementsByName('color');
+      let selectedColor = '';
+      for (let i = 0; i < colors.length; i++) {
+        if (colors[i].checked) {
+          selectedColor = colors[i].value;
+          break;
+        }
+      }
+      const result = document.querySelector('#result');
+      if (selectedColor) {
+        result.textContent = 'You selected:' + selectedColor;
+      } else {
+        result.textContent = 'Please select a color';
+      }
+    this.reset()
+    }
+  </script>
+
+</body>
+</html>
